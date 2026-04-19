@@ -1,0 +1,5 @@
+# Remplacez l’URL du Sitemap par votre domaine de production (cohérent avec VITE_PUBLIC_SITE_URL).
+User-agent: *
+Allow: /
+
+Sitemap: https://bnibina.ma/sitemap.xml

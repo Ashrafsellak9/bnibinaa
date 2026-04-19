@@ -1,0 +1,7 @@
+{
+  "name": "BNI BINA - Rénovation & Matériaux",
+  "description": "Plateforme marocaine spécialisée dans la rénovation haut de gamme et la vente de matériaux de construction à Marrakech et partout au Maroc.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

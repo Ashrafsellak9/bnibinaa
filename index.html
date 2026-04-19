@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BNI BINA | Excellence en Rénovation & Construction au Maroc</title>
+    <meta name="description" content="Expert BTP au Maroc : rénovation haut de gamme, second œuvre, matériaux et accompagnement technique. Marrakech, Casablanca, Rabat.">
+    <link rel="canonical" href="https://bnibina.ma/">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="alternate icon" href="/favicon.svg">
+    <meta name="theme-color" content="#1A1A1A">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="BNI BINA">
+    <meta property="og:locale" content="fr_MA">
+    <meta property="og:title" content="BNI BINA | Excellence en Rénovation & Construction au Maroc">
+    <meta property="og:description" content="Expert BTP au Maroc : rénovation haut de gamme, second œuvre, matériaux et accompagnement technique. Marrakech, Casablanca, Rabat.">
+    <meta property="og:url" content="https://bnibina.ma/">
+    <meta property="og:image" content="https://bnibina.ma/og-default.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="BNI BINA | Excellence en Rénovation & Construction au Maroc">
+    <meta name="twitter:description" content="Expert BTP au Maroc : rénovation haut de gamme, second œuvre, matériaux et accompagnement technique.">
+    <meta name="twitter:image" content="https://bnibina.ma/og-default.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FF6B35',
+                        secondary: '#FFB84D',
+                        primaryDark: '#E55A2B',
+                        darkGray: '#1A1A1A', // Noir plus profond pour le côté premium
+                        lightGray: '#F9F9F9',
+                        accentWood: '#8B6F47',
+                        success: '#10B981',
+                        warning: '#F59E0B',
+                        error: '#EF4444',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    },
+                    letterSpacing: {
+                        tightest: '-.075em',
+                        widest: '.25em',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes subtleZoom {
+            from { transform: scale(1); }
+            to { transform: scale(1.1); }
+        }
+        .hero-zoom {
+            animation: subtleZoom 20s infinite alternate ease-in-out;
+        }
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            background-color: rgba(255, 255, 255, 0.85);
+        }
+        .btn-premium {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .btn-premium::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: all 0.6s;
+        }
+        .btn-premium:hover::before {
+            left: 100%;
+        }
+        .section-title {
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+        }
+        .card-premium {
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-premium:hover {
+            border-color: #FF6B35;
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px -12px rgba(0,0,0,0.15);
+        }
+        .text-outline {
+            -webkit-text-stroke: 1px rgba(255,255,255,0.3);
+            color: transparent;
+        }
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.12.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-white text-darkGray font-sans selection:bg-primary selection:text-white">
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
