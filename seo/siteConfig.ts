@@ -1,3 +1,7 @@
+/** Réseaux officiels (profils publics). */
+export const INSTAGRAM_URL = 'https://www.instagram.com/bni.bina/';
+export const LINKEDIN_URL = 'https://www.linkedin.com/in/anass-fathallah-2100b62a5/';
+
 /** URL publique du site (sans slash final). À définir dans `.env` : `VITE_PUBLIC_SITE_URL=https://votredomaine.ma` */
 export const SITE_ORIGIN: string = (() => {
   const raw =

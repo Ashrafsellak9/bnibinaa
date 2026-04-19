@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Instagram, Linkedin, Facebook, Send, CheckCircle, ArrowRight } from 'lucide-react';
 import imgChantier from '../images/Construction_Batiment.jpeg';
+import { INSTAGRAM_URL, LINKEDIN_URL } from '../seo/siteConfig';
 
 const Contact: React.FC = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -73,11 +74,19 @@ const Contact: React.FC = () => {
                <h3 className="text-xs font-black text-gray-400 uppercase tracking-widest mb-10">Réseaux Sociaux</h3>
                <div className="flex space-x-4">
                   {[
-                    { icon: <Instagram />, label: 'Instagram' },
-                    { icon: <Linkedin />, label: 'LinkedIn' },
-                    { icon: <Facebook />, label: 'Facebook' }
+                    { icon: <Instagram />, label: 'Instagram', href: INSTAGRAM_URL },
+                    { icon: <Linkedin />, label: 'LinkedIn', href: LINKEDIN_URL },
+                    { icon: <Facebook />, label: 'Facebook', href: '#' },
                   ].map((soc, i) => (
-                    <a key={i} href="#" className="w-14 h-14 bg-white border border-gray-100 flex items-center justify-center text-darkGray hover:bg-primary hover:text-white hover:border-primary transition-all duration-300" aria-label={soc.label}>
+                    <a
+                      key={i}
+                      href={soc.href}
+                      {...(soc.href.startsWith('http')
+                        ? { target: '_blank', rel: 'noopener noreferrer' }
+                        : {})}
+                      className="w-14 h-14 bg-white border border-gray-100 flex items-center justify-center text-darkGray hover:bg-primary hover:text-white hover:border-primary transition-all duration-300"
+                      aria-label={soc.href.startsWith('http') ? `${soc.label} (nouvel onglet)` : soc.label}
+                    >
                       <span aria-hidden="true">{soc.icon}</span>
                     </a>
                   ))}

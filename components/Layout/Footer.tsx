@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
 import logo from '@/BniBinaLogo.png';
 import { SHOW_MATERIAUX_IN_PUBLIC_UI } from '../../featureFlags';
+import { INSTAGRAM_URL, LINKEDIN_URL } from '../../seo/siteConfig';
 
 const Footer: React.FC = () => {
   const phoneNumber = "06 63 48 89 00";
@@ -26,10 +27,10 @@ const Footer: React.FC = () => {
               Expert marocain en rénovation haut de gamme et distribution de matériaux de construction. Nous bâtissons vos rêves avec rigueur et passion.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="bg-white/5 p-3 rounded-xl hover:bg-primary transition-all group" aria-label="Instagram BNI BINA">
+              <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="bg-white/5 p-3 rounded-xl hover:bg-primary transition-all group" aria-label="Instagram BNI BINA (nouvel onglet)">
                 <Instagram size={20} className="group-hover:scale-110 transition-transform" aria-hidden="true" />
               </a>
-              <a href="#" className="bg-white/5 p-3 rounded-xl hover:bg-primary transition-all group" aria-label="LinkedIn BNI BINA">
+              <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="bg-white/5 p-3 rounded-xl hover:bg-primary transition-all group" aria-label="LinkedIn BNI BINA (nouvel onglet)">
                 <Linkedin size={20} className="group-hover:scale-110 transition-transform" aria-hidden="true" />
               </a>
               <a href="#" className="bg-white/5 p-3 rounded-xl hover:bg-primary transition-all group" aria-label="Facebook BNI BINA">
